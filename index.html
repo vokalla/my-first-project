@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Information Technologies</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Header & Navigation */
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      padding: 5px 10px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover {
+      background: #555;
+      border-radius: 5px;
+    }
+    /* Sections */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section:nth-of-type(odd) {
+      background: #fff;
+    }
+    section:nth-of-type(even) {
+      background: #eef2f3;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    p, li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    /* Contact Form */
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #555;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <h1>Information Technologies</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#software">Software Development</a></li>
+        <li><a href="#networking">Networking & Cybersecurity</a></li>
+        <li><a href="#cloud">Cloud Computing</a></li>
+        <li><a href="#ai">Artificial Intelligence</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome</h2>
+    <p>Explore the dynamic world of Information Technologies, where innovation meets functionality. From building software to securing networks, IT is at the heart of modern life.</p>
+  </section>
+
+  <!-- Software Development Section -->
+  <section id="software">
+    <h2>Software Development</h2>
+    <p>Software development encompasses creating applications, websites, and systems. This field includes:</p>
+    <ul>
+      <li>Web Development (HTML, CSS, JavaScript, and frameworks)</li>
+      <li>Mobile Apps (Android, iOS)</li>
+      <li>Desktop Software (Windows, macOS, Linux)</li>
+    </ul>
+  </section>
+
+  <!-- Networking & Cybersecurity Section -->
+  <section id="networking">
+    <h2>Networking & Cybersecurity</h2>
+    <p>Ensuring secure and efficient communication is crucial. Key areas include:</p>
+    <ul>
+      <li>Network protocols and infrastructure</li>
+      <li>Cybersecurity measures like encryption and firewalls</li>
+      <li>Ethical hacking and security audits</li>
+    </ul>
+  </section>
+
+  <!-- Cloud Computing Section -->
+  <section id="cloud">
+    <h2>Cloud Computing</h2>
+    <p>Cloud services offer scalable, on-demand computing power. Popular platforms include:</p>
+    <ul>
+      <li>Amazon Web Services (AWS)</li>
+      <li>Google Cloud Platform (GCP)</li>
+      <li>Microsoft Azure</li>
+    </ul>
+  </section>
+
+  <!-- Artificial Intelligence Section -->
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <p>AI is transforming industries with applications in:</p>
+    <ul>
+      <li>Machine Learning and Data Analysis</li>
+      <li>Natural Language Processing (NLP)</li>
+      <li>Computer Vision and Robotics</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Information Technologies. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for smooth scrolling and simple form handling -->
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Basic contact form submission behavior
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
